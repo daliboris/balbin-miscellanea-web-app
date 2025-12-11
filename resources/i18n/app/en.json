@@ -1,0 +1,44 @@
+{
+    "breadcrumb": {
+        "collection-root": "Documents",
+        "document-root": "Collections",
+        "demo": "Demo",
+        "jats": "JATS",
+        "docx": "DOCX",
+        "letters": "Letters"
+    },
+    "timeline": {
+        "range": "Time range: "
+    },
+    "browse": {
+        "category": "Category",
+        "author": "Author",
+        "title": "Title"
+    },
+    "search": {
+        "title": "Title",
+        "content": "Content",
+        "results": "Search results"
+    },
+    "register-details": {
+        "document-list": "Documents",
+        "people": "People",
+        "places": "Places"
+        
+    },
+    "odd": {
+        "licence": "Licence",
+        "sources": "Sources",
+        "metadata": "Metadata"
+    },
+    "iiif": {
+        "page": "Page"
+    },
+    "login" : {
+        "login" : "Log in",
+        "messages" : { 
+        "restricted" : "You need to be logged in to see this content.",
+        "continue" : "Select an item from the menu or footer to continue."
+        } 
+    }
+}

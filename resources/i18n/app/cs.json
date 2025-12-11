@@ -1,0 +1,40 @@
+{
+    "breadcrumb": {
+        "collection-root": "Dokumenty",
+        "document-root": "Kolekce"
+    },
+    "timeline": {
+        "range": "Časový rozsah: "
+    },
+    "browse": {
+        "category": "kategorie",
+        "author": "autor",
+        "title": "titul"
+    },
+    "search": {
+        "title": "titul",
+        "content": "obsah",
+        "results": "Výsledky hledání"
+    },
+    "register-details": {
+        "document-list": "Dokumenty",
+        "people": "Lidé",
+        "places": "Lidé"
+    },
+    "odd": {
+        "licence": "Licence",
+        "sources": "Zdoje",
+        "metadata": "Metadata"
+    },
+    "iiif": {
+        "page": "Strana"
+    },
+    "login" : {
+        "login" : "Přihlásit se",
+        "messages" : { 
+            "restricted": "Pro zobrazení tohoto obsahu se musíte přihlásit.",
+            "continue" : "Pro pokračování vyberte položku z nabídky nebo zápatí."
+        } 
+    }
+    
+}

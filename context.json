@@ -1,0 +1,342 @@
+{
+  "actions" : [ {
+    "description" : "Reindex data",
+    "name" : "reindex"
+  }, {
+    "description" : "Fix ODDs",
+    "name" : "fix-odds"
+  } ],
+  "profiles" : [ "base10", "iiif", "registers", "toolbar-toggles", "metadata-panel", "jinntap", "upload", "theme-base10" ],
+  "_lastModified" : "2025-12-07T16:26:53.914Z",
+  "odds" : [ "teipublisher.odd", "balbin.odd" ],
+  "version" : "1.0.0",
+  "id" : "https://bohemian-nobility.nacr.cz/apps/balbin",
+  "upload" : {
+    "target" : "",
+    "accept" : ".xml",
+    "enabled" : true
+  },
+  "_update" : true,
+  "styles" : [ "resources/css/pico-components.css", "https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/classic.min.css", "resources/css/jinks-theme.css" ],
+  "_noDeploy" : false,
+  "depends" : [ "base10" ],
+  "template-suffix" : "\\.tpl",
+  "ignore" : [ "repo.xml", "resources/css/components.css" ],
+  "target" : "/db/apps/balbin",
+  "menu" : {
+    "language" : true,
+    "delete" : true,
+    "dark-mode" : true,
+    "items" : [ {
+      "url" : "",
+      "id" : "Start"
+    }, {
+      "url" : "noble-houses",
+      "id" : "noble-houses"
+    }, {
+      "url" : "people",
+      "id" : "people"
+    }, {
+      "url" : "places",
+      "id" : "places"
+    }, {
+      "url" : "organizations",
+      "id" : "organizations"
+    }, {
+      "url" : "bibliography",
+      "id" : "bibliography"
+    } ],
+    "login" : true,
+    "download" : true,
+    "search" : true
+  },
+  "theme" : {
+    "logo" : {
+      "width" : "140px",
+      "height" : "48px",
+      "dark" : "../images/tei-publisher-logo-contrast-color.svg",
+      "splash" : {
+        "size" : "360px auto",
+        "dark" : "../images/tei-publisher-logo-contrast-color.svg",
+        "light" : "../images/tei-publisher-logo-color.svg"
+      },
+      "light" : "../images/tei-publisher-logo-contrast-color.svg"
+    },
+    "hero" : {
+      "background-position" : "center",
+      "background-color" : "rgba(0, 0, 0, 0.6)",
+      "class" : "row",
+      "text-width" : "50rem",
+      "background-size" : "cover",
+      "background-image" : "../images/typewriter.jpg",
+      "background-repeat" : "no-repeat"
+    },
+    "bottom" : {
+      "background-color" : "rgba(0, 0, 0, 0.4)",
+      "background-size" : "cover",
+      "background-image" : "../images/typewriter-on-books.jpg",
+      "background-repeat" : "no-repeat"
+    },
+    "layout" : {
+      "search" : "before-top",
+      "after-width" : "min(30vw, 356px)",
+      "max-width" : "108rem",
+      "toggle-before" : true,
+      "before-width" : "min(30vw, 356px)",
+      "class" : "fixed-layout"
+    },
+    "breadcrumbs" : {
+      "max" : "40ch"
+    },
+    "header" : {
+      "background-image" : null
+    },
+    "fonts" : {
+      "toc" : {
+        "size" : "1.125rem"
+      },
+      "menubar" : {
+        "size" : "14px"
+      },
+      "footnote" : {
+        "size" : "0.9em"
+      },
+      "base" : {
+        "family" : "'Inter', 'Noto', sans-serif",
+        "line-height" : "140%",
+        "size" : "16px",
+        "weight" : "400"
+      },
+      "heading" : {
+        "family" : "'Inter', 'Noto', sans-serif",
+        "size" : "1.2rem",
+        "weight" : "400"
+      },
+      "breadcrumbs" : {
+        "size" : "0.9rem"
+      },
+      "content" : {
+        "family" : "JunicodeVF, Georgia, 'Times New Roman', serif",
+        "line-height" : "150%",
+        "size" : "1.25rem",
+        "weight" : "400"
+      }
+    },
+    "texture" : {
+      "background-image" : "../images/jinks-images/paper.jpeg"
+    },
+    "colors" : {
+      "palettes" : {
+        "green" : "palette-green.css",
+        "teal" : "palette-teal.css",
+        "neutral" : "palette-neutral.css",
+        "blue" : "palette-blue.css",
+        "beige" : "palette-beige.css"
+      },
+      "menubar" : {
+        "background-color" : "var(--jinks-colors-500)",
+        "color" : "#ffffff",
+        "background-image" : null
+      },
+      "palette" : "neutral"
+    }
+  },
+  "features" : {
+    "collab" : {
+      "server" : "wss://dev.tei-publisher.com/collab",
+      "enable" : false
+    },
+    "browse" : {
+      "sort" : {
+        "options" : [ {
+          "label" : "Category",
+          "value" : "category",
+          "key" : "browse.category"
+        }, {
+          "label" : "Title",
+          "value" : "title",
+          "key" : "browse.title"
+        }, {
+          "label" : "Author",
+          "value" : "author",
+          "key" : "browse.author"
+        } ],
+        "default" : "category"
+      },
+      "field" : {
+        "options" : [ {
+          "label" : "Content",
+          "value" : "text",
+          "key" : "search.content"
+        }, {
+          "label" : "Title",
+          "value" : "title",
+          "key" : "search.title"
+        } ],
+        "default" : "text"
+      }
+    },
+    "menubar" : true,
+    "register" : {
+      "placement" : "right",
+      "enabled" : false
+    },
+    "upload" : {
+      "target" : "",
+      "accept" : ".xml, .tei, .odd, .docx, .md, .mei",
+      "enabled" : true
+    },
+    "jinntap" : {
+      "cdn" : "https://cdn.jsdelivr.net/npm/@jinntec/jinntap",
+      "schema" : "resources/schema/schema.json",
+      "version" : "1.27.0"
+    },
+    "iiif" : {
+      "viewer" : "pb-tify",
+      "base_uri" : "https://apps.existsolutions.com/cantaloupe/iiif/2/",
+      "enabled" : false
+    },
+    "toolbar" : {
+      "zoom" : true,
+      "navigation" : true,
+      "enabled" : true,
+      "progress" : {
+        "subscribe" : "transcription",
+        "enabled" : true
+      }
+    },
+    "toolbar-toggles" : {
+      "toggle-reading" : false,
+      "enabled" : false
+    },
+    "hero" : false,
+    "toc" : {
+      "collapse" : false,
+      "enabled" : false
+    }
+  },
+  "indexing" : {
+    "tei" : {
+      "enable" : false,
+      "context" : "div"
+    },
+    "docbook" : {
+      "enable" : false
+    },
+    "jats" : {
+      "enable" : false
+    }
+  },
+  "pkg" : {
+    "website" : "http://tei-publisher.com",
+    "abbrev" : "balbin",
+    "version" : "1.0.0",
+    "dependencies" : [ {
+      "semver" : "1",
+      "package" : "http://e-editiones.org/roaster"
+    }, {
+      "semver" : "6",
+      "package" : "http://existsolutions.com/apps/tei-publisher-lib"
+    }, {
+      "semver" : "1",
+      "package" : "http://tei-publisher.com/library/jinks-templates"
+    }, {
+      "semver" : "6",
+      "package" : "http://expath.org/ns/crypto"
+    }, {
+      "semver" : "2",
+      "package" : "http://existsolutions.com/ns/jwt"
+    } ],
+    "permissions" : "rw-r--r--",
+    "user" : {
+      "name" : "lehecka",
+      "group" : "administration",
+      "groups" : [ "tei", "redaction", "translation", "annotation", "administration" ]
+    }
+  },
+  "description" : "Includes style defaults",
+  "label" : "Bohuslav Balbín, Miscellanea",
+  "browse" : {
+    "sort" : {
+      "options" : [ {
+        "label" : "Title",
+        "value" : "title",
+        "key" : "browse.title"
+      }, {
+        "label" : "Author",
+        "value" : "author",
+        "key" : "browse.author"
+      } ],
+      "default" : "title"
+    },
+    "field" : {
+      "options" : [ {
+        "label" : "Content",
+        "value" : "text",
+        "key" : "search.content"
+      }, {
+        "label" : "Title",
+        "value" : "title",
+        "key" : "search.title"
+      } ],
+      "default" : "text"
+    }
+  },
+  "_dry" : false,
+  "source" : "/db/apps/jinks/profiles/theme-base10",
+  "type" : "theme",
+  "skip" : [ "^doc/.*$", "setup.xql", "config.json" ],
+  "category" : "workflow",
+  "_overwrite" : "quick",
+  "defaults" : {
+    "sort" : [ {
+      "field" : "date"
+    }, {
+      "field" : "name"
+    } ],
+    "data" : "/db/apps/balbin-data/data",
+    "address-by-id" : false,
+    "odd-root" : "resources/odd",
+    "upload" : "editions",
+    "data-default" : "editions",
+    "direction" : "ltr",
+    "view" : "div",
+    "media" : [ "web", "print" ],
+    "template" : "balbin.html",
+    "browse" : "browse.html",
+    "search" : "div",
+    "odd" : "balbin.odd",
+    "pagination" : {
+      "fill" : 5,
+      "depth" : 10
+    }
+  },
+  "templating" : {
+    "use" : [ "templates/iiif-blocks.html", "templates/register-blocks.html", "templates/toggle-blocks.html", "templates/metadata-blocks.html", "templates/editor-blocks.html", "templates/upload-blocks.html" ],
+    "modules" : {
+      "http://teipublisher.com/ns/templates/browse" : {
+        "at" : "modules/templates/browse.xqm",
+        "prefix" : "browse"
+      },
+      "http://teipublisher.com/ns/templates/page" : {
+        "at" : "modules/templates/page.xqm",
+        "prefix" : "page"
+      }
+    }
+  },
+  "script" : {
+    "custom" : [ ],
+    "webcomponents" : "2.26.0-next-3.17",
+    "extra-components" : [ ],
+    "cdn" : "https://cdn.jsdelivr.net/npm/@teipublisher/pb-components"
+  },
+  "order" : 902,
+  "$schema" : "../../schema/jinks.json",
+  "i18n" : [ "registers" ],
+  "api" : [ {
+    "spec" : "registers-api.json",
+    "prefix" : "rview",
+    "id" : "http://teipublisher.com/api/registers/view",
+    "path" : "registers-api.xql"
+  } ]
+}

@@ -1,0 +1,38 @@
+<template>
+    ---json
+    {
+        "features": {
+            "toolbar": {
+                "navigation": false
+            },
+            "upload": {
+                "enabled": false
+            }
+        },
+        "templating": {
+            "extends": "templates/layouts/content.html"
+        }
+    }
+    ---
+
+    <main>
+        <section>
+            <h1 class="tp-title" data-template="config:app-title"/>
+        </section>
+        
+        <section>
+            <pb-restricted login="login" group="[[ string-join($pkg?user?groups, ', ') ]]">
+                <div class="continue" >
+                    <p><pb-i18n key="login.messages.continue">Select an item from the menu or footer to continue.</pb-i18n></p>
+                </div>
+
+                <div slot="fallback">
+                    <div class="restricted" >
+                        <p><pb-i18n key="login.messages.restricted">You need to be logged in to see this content.</pb-i18n></p>
+                    </div>
+                </div>
+            </pb-restricted>
+        </section>
+    </main>
+
+</template>

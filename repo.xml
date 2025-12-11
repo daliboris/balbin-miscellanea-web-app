@@ -1,0 +1,13 @@
+<meta xmlns="http://exist-db.org/xquery/repo" commit-id="@commit-id@" commit-time="@commit-time@">
+    <description>Bohuslav Balbín, Miscellanea</description>
+    <author>Boris Lehečka</author>
+    <website>https://balbin.nacr.cz</website>
+    <status>beta</status>
+    <license>GPLv3</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>balbin</target>
+    <prepare>pre-install.xql</prepare>
+    <finish>post-install.xql</finish>
+    <permissions user="redaktor" group="tei" mode="rw-rw-r--"/>
+</meta>

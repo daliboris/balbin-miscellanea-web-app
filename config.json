@@ -1,0 +1,86 @@
+{
+  "pkg" : {
+    "abbrev" : "balbin"
+  },
+  "odds" : [ "balbin.odd" ],
+  "id" : "https://bohemian-nobility.nacr.cz/apps/balbin",
+  "upload" : {
+    "target" : "",
+    "accept" : ".xml",
+    "enabled" : true
+  },
+  "defaults" : {
+    "sort" : [ {
+      "field" : "name"
+    } ],
+    "data" : "/db/apps/balbin-data/data",
+    "address-by-id" : true,
+    "upload" : "editions",
+    "data-default" : "editions",
+    "odd" : "balbin.odd",
+    "media" : [ "web", "print" ]
+  },
+  "extends" : [ "base10", "iiif", "registers", "toolbar-toggles", "metadata-panel", "jinntap", "upload", "theme-base10" ],
+  "menu" : {
+    "language" : true,
+    "delete" : true,
+    "dark-mode" : true,
+    "items" : [ {
+      "url" : "",
+      "id" : "Start"
+    }, {
+      "url" : "noble-houses",
+      "id" : "noble-houses"
+    }, {
+      "url" : "people",
+      "id" : "people"
+    }, {
+      "url" : "places",
+      "id" : "places"
+    }, {
+      "url" : "institutions",
+      "id" : "institutions"
+    } ],
+    "login" : true,
+    "download" : true,
+    "search" : true
+  },
+  "indexing" : {
+    "tei" : {
+      "enable" : false
+    },
+    "docbook" : {
+      "enable" : false
+    },
+    "jats" : {
+      "enable" : false
+    }
+  },
+  "label" : "Bohuslav Balbín, Miscellanea",
+  "browse" : {
+    "sort" : {
+      "options" : [ {
+        "label" : "Title",
+        "value" : "title",
+        "key" : "browse.title"
+      }, {
+        "label" : "Author",
+        "value" : "author",
+        "key" : "browse.author"
+      } ],
+      "default" : "title"
+    },
+    "field" : {
+      "options" : [ {
+        "label" : "Content",
+        "value" : "text",
+        "key" : "search.content"
+      }, {
+        "label" : "Title",
+        "value" : "title",
+        "key" : "search.title"
+      } ],
+      "default" : "text"
+    }
+  }
+}

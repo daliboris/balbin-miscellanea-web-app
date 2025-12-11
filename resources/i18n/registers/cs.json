@@ -1,0 +1,9 @@
+{
+    "menu" : {
+        "people": "Lidé",
+        "places": "Místa",
+        "organizations": "Instituce",
+        "noble-houses": "Rody",
+        "bibliography": "Bibliografie"
+    }
+}

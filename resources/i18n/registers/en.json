@@ -1,0 +1,9 @@
+{
+    "menu" : {
+        "people": "People",
+        "places": "Places",
+        "noble-houses": "Noble houses",
+        "organizations": "Institutions",
+        "bibliography": "Bibliography"
+    }
+}

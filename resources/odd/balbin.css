@@ -1,0 +1,18 @@
+.tei-persName {
+    color: blue;
+}
+
+
+.tei-persName.noble {
+    color: red;
+}
+
+.tei-placeName {
+    color: grey;
+}
+
+.found {
+   background-color: wheat;
+   border: 2px solid black;
+}
+

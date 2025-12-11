@@ -1,0 +1,28 @@
+<template>
+    ---json
+    {
+        "templating": {
+            "extends": "templates/layouts/content.html"
+        },
+        "urls": {
+            "ignore": "selectors"
+        },
+        "features": {
+            "toc": {
+                "enabled": true,
+                "collapse": false
+            },
+            "metadata": {
+                "enabled": false
+            },
+            "iiif": {
+                "viewer": "pb-tify",
+                "enabled": true,
+                "type": "image"
+            }
+        }
+    }
+    ---
+    <!-- Basic template for a page with a single document with scrollbar -->
+    <pb-view src="document1" view="page" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription" direction="[[$context?defaults?direction]]"/>
+</template>
